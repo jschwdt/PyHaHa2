@@ -1,0 +1,61 @@
+###########################################
+# File .gitignore for the PyHaHa2 Project #
+# Last modified 2018-09-20                #
+###########################################
+
+
+################
+# Global rules #
+################
+
+*.pyc
+*.pyo
+*.log
+*~
+
+##########
+# Images #
+##########
+
+demos/*.pdf
+demos/*.jpg
+demos/*.png
+
+############################
+# Re-creatable Directories #
+############################
+
+
+#########
+# Other #
+#########
+
+MANIFEST
+dist
+static
+__pycache__/
+test*.py
+*.cv.pdf
+*.iv.pdf
+
+#########################
+# LaTeX auxiliary files #
+#########################
+doc/latex/*.aux
+doc/latex/*.idx
+doc/latex/*.ilg
+doc/latex/*.ind
+doc/latex/*.log
+doc/latex/*.out
+doc/latex/*.toc
+doc/latex/*.sty
+doc/latex/*.tex
+
+doc/doctrees/
+doc/latex/Makefile
+doc/latex/python.ist
+doc/latex/sphinxhowto.cls
+doc/latex/sphinxmanual.cls
+doc/latex/*.png
+
+

@@ -1,0 +1,94 @@
+# -*- coding: utf-8 -*-
+##############################################################################
+# File:                pyhaha_plot_defaults
+# Created:             2016-10-13
+# Last modification:   2016-10-31
+# Author:              Michael Hufschmidt <michael.hufschmidt@desy.de>
+#                                         <michael@hufschmidt-web.de>
+# Copyright:           (C) Michael Hufschmidt 2016
+# License (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/deed.de
+#
+# This is to adapt the style of your plots
+# original values are commented out, here only modified values
+# The current value of all parameters can be seen with:
+#    import matplotlib.pyplot as plt
+#    print(plt.rcParams)
+# For a commented version showing all parameter definitions look at the file:
+#    matplotlibrc.orig
+# For changing plot paramters; use:
+#    plt.rcParams.update(my_params)
+## See also:
+# http://matplotlib.org/users/customizing.html
+###############################################################################
+{
+#####      font.xxx
+#         'font.sans-serif'     : ['Bitstream Vera Sans', 'DejaVu Sans', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', 'sans-serif'],
+          'font.sans-serif'     : ['Arial', 'Helvetica', 'Bitstream Vera Sans', 'DejaVu Sans', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Avant Garde', 'sans-serif'],
+#         'font.size'           : 12.0  # original
+          'font.size'           : 16.0,  # for title, text(\mathrm{}), labels, ...
+#####      axes.xxx
+# 'axes.titlesize' and 'axes.labelsize' is either a relative value of
+#     'xx-small', 'x-small', 'small', 'medium', 'large', 'x-large', 'xx-large'
+#     or an absolute font size, e.g., 12
+#         'axes.titlesize'      : 'large',  # original
+#         'axes.labelsize'      : 'medium', # original
+          'axes.titlesize'      : 'large',    # fontsize of the axes title
+          'axes.labelsize'      : 'large',    # fontsize of the x any y labels
+#          'axes.grid'           : False,  # original
+          'axes.grid'           : True,    # display grid or not
+
+#####      tick.xxx
+# 'tick.labelsize' is either an relative value of 'xx-small', 'x-small',
+#     'small', 'medium', 'large', 'x-large', 'xx-large'
+#     or an absolute font size, e.g., 12
+#          'xtick.labelsize'     : 'medium', # original
+#          'ytick.labelsize'     : 'medium', # original
+           'xtick.labelsize'     : 'large',    # fontsize of the tick labels
+           'ytick.labelsize'     : 'large',    # fontsize of the tick labels
+#          'xtick.direction'     : 'in',   # original
+#          'ytick.direction'     : 'in',   # original
+           'xtick.direction'     : 'out',   # in, out, or inout
+           'ytick.direction'     : 'out',   # in, out, or inout
+
+#####      grid.xxx
+#         'grid.alpha'          : 1.0,    # original
+          'grid.alpha'          : 0.4,     # transparency, between 0.0 and 1.0
+#         'grid.color'          : 'k',    # original
+          'grid.color'          : 'black', # grid color
+#         'grid.linestyle'      : ':',    # original: dotted
+          'grid.linestyle'      : '-',     # line
+          'grid.linewidth'      : 0.5,     # in points
+
+#####      legend.xxx
+# 'legend.fontsize' is either an relative value of 'xx-small', 'x-small',
+#     'small', 'medium', 'large', 'x-large', 'xx-large'
+#     or an absolute font size, e.g., 12
+#         'legend.fontsize'     : 'medium', # original
+          'legend.fontsize'     : 'large', # legend size
+#         'legend.numpoints'    : 2,      # original
+          'legend.numpoints'    : 3,       # number of points in the legend line
+# the following dimensions are in axes coords, in fraction of fontsize
+#         'legend.handlelength' : 2.0,    # original
+          'legend.handlelength' : 2.3,     # length of the legend lines
+#         'legend.handletextpad': 0.8,    # original
+          'legend.handletextpad': 0.2,     # space between the legend line and text
+#         'legend.labelspacing' : 0.5,    # original
+          'legend.labelspacing' : 0.6,     # space between two lines
+
+#####      lines.xxx
+#         'lines.linewidth'     : 1.0,    # original
+          'lines.linewidth'     : 1.5,     # line width in points
+
+#####      text.xxx
+          'text.usetex'         : False,  # use latex for all text handling.
+
+#####      figure.xxx
+#         'figure.figsize'      : [8.0, 6.0], # original
+          'figure.figsize'      : [11.0, 8.0], # figure size in inches
+
+#####      savefig.xxx
+#         'savefig.format'      : 'png',  # original
+          'savefig.format'      : 'pdf',   # png, ps, pdf, svg
+#         'savefig.dpi'         : 100,    # original
+          'savefig.dpi'         : 300,     # figure dots per inch
+          }
