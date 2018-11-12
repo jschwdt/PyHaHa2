@@ -2,7 +2,7 @@
 ##############################################################################
 # File:                cold_chuck_plots.py
 # Created:             2018-08-27
-# Last modification:   2018-09-24
+# Last modification:   2018-11-12
 # Author:              Michael Hufschmidt <michael.hufschmidt@desy.de>
 #                                         <michael@hufschmidt-web.de>
 # Copyright:           (C) Michael Hufschmidt 2018
@@ -29,6 +29,7 @@ The module contains the classes:
 * class YZfPlot (ColdChuckPlots)
 
 """
+from cold_chuck_tools import *
 from pyhaha import *
 
 class ColdChuckPlots (PyHaHaPlot2):

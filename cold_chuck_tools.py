@@ -2,7 +2,7 @@
 ##############################################################################
 # File:                cold_chuck_tools.py
 # Created:             2018-08-27
-# Last modification:   2018-09-27
+# Last modification:   2018-11-12
 # Author:              Michael Hufschmidt <michael.hufschmidt@desy.de>
 #                                         <michael@hufschmidt-web.de>
 # Copyright:           (C) Michael Hufschmidt 2018
@@ -32,6 +32,7 @@ The module contains the classes:
 
 """
 
+from file_utils import *
 from pyhaha import *
 
 MYHOME = os.getenv('HOME')
