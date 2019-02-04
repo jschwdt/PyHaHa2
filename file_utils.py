@@ -2,7 +2,7 @@
 ##############################################################################
 # File:                file_utils.py
 # Created:             2018-08-27
-# Last modification:   2018-10-01
+# Last modification:   2019-02-04
 # Author:              Michael Hufschmidt <michael.hufschmidt@desy.de>
 #                                         <michael@hufschmidt-web.de>
 # Copyright:           (C) Michael Hufschmidt 2018
@@ -26,6 +26,7 @@ The module contains the utility functions:
 * function log_to_file
 * function logfile
 * function collect_files
+* function linuxpath_to_win
 * function winpath_to_linux
 
 The module defines the global constants:
@@ -215,6 +216,36 @@ def collect_files(base_dir, min_date='1990-01-01', valid_ext=None):
                 item = [mod_date, size, ext, name, fullname]
                 items.append(item)
     return items
+
+def linuxpath_to_win(linux_path, drive='', sql=False):
+    """
+    This converts a Linux path with forward slashes
+    to a windows path with backslashes.
+
+    Parameter:
+    *linux_path* : string
+        Full path in Linux format, input
+
+    *drive* : string, optional
+        Optional a Windows drive to preceed the Windows path, could be
+        for instance 'j:'.
+
+    *sql* : bool, optional
+        If True, the returned path can used in SQL statements. In this
+        case the backslashes will to be escaped by double backslashes.
+
+    *return* : string
+        The windows path, optionally with drive, optionally with
+        escaped backslases.
+    """
+    file = linux_path
+    if len(drive) > 0:
+        file = drive + '/' + linux_path
+    if sql:
+        win_path = file.replace('/', '\\\\')
+    else:
+        win_path  =  file.replace('/', '\\')
+    return win_path
 
 def winpath_to_linux(winpath):
     """
