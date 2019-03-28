@@ -2,7 +2,7 @@
 ##############################################################################
 # File:                cold_chuck_tools.py
 # Created:             2018-08-27
-# Last modification:   2018-11-12
+# Last modification:   2019-03-28
 # Author:              Michael Hufschmidt <michael.hufschmidt@desy.de>
 #                                         <michael@hufschmidt-web.de>
 # Copyright:           (C) Michael Hufschmidt 2018
@@ -364,6 +364,24 @@ class ColdChuckData():
             return self._data[self._voltage_index_range[0] : self._voltage_index_range[1] + 1, :]
         else:
             return self._data[i_range[0] : i_range[1] + 1, :]
+
+    def set_data(self, new_data):
+        """
+        Replaces the origial datalines within the class instance by the numpy
+        array new_data which may contain
+        manipulated data (for instance with an offset calcutaion). Subsequent
+        calls to get_data() will then return the new numpy array. Parameters:
+
+        *new_data* : numpy array
+            New data lines, 2-dimesional array of float, to be
+            stored in the class instance
+
+        *return* :
+            No return value
+        """
+        self._data = new_data
+        return None
+
 
     def get_frequencies(self):
         """
