@@ -142,7 +142,10 @@ Welcome to the PyHaHa2 documentation!
     ----------------------
     .. autofunction:: collect_files
 
+    function linuxpath_to_win
+    -------------------------
+    .. autofunction:: linuxpath_to_win
+
     function winpath_to_linux
     -------------------------
     .. autofunction:: winpath_to_linux
-
